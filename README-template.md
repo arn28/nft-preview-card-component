@@ -23,7 +23,7 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/arn28/QR-code-component.git)
+- Solution URL: [GitHub](https://github.com/arn28/nft-preview-card-component)
 - Live Site URL: [Vercel](https://qr-code-component-eta-eight.vercel.app/)
 
 ## My process
