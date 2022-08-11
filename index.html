@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <style>
+    :root{
+      /* Colors */
+      /* primary */
+      --soft-blue: hsl(215, 51%, 70%);
+      --cyan: hsl(178, 100%, 50%);
+
+      /* Neutral */
+      --very-dark-blue-main-bg: hsl(217, 54%, 11%); /*main BG*/
+      --very-dark-blue-card-bg: hsl(216, 50%, 16%); /*card BG*/
+      --very-dark-blue-line: hsl(215, 32%, 27%); /*line*/
+      --white: hsl(0, 0%, 100%);
+    }
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', sans-serif;
+      font-size: 18px;
+      color: var(--white);
+    }
+
+    .nft-preview-card{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--very-dark-blue-main-bg);
+    }
+    .container{
+      width: 324px;
+      height: 544px;
+      padding: 24px;
+      background-color: var(--very-dark-blue-card-bg);
+      border-radius: 12px;
+      filter: drop-shadow( 0px 15px 50px hsl(217, 54%, 5%));
+    }
+    .container .nftImage{
+      position: relative;
+    }
+    .container .nftImage>img{
+      width: 100%;
+      border-radius: 8px;
+    }
+    .container .nftImage .view{
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      background-color: rgba(0, 255, 247, 0.5);
+      height: 99%;
+      width: 100%;
+      border-radius: 8px; 
+      cursor: pointer;
+    }
+
+    .container .nftImage .view:hover{
+      opacity: 1;  
+    }
+
+    .container .nftImage .view img{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .container h3{
+      display: block;
+      color: var(--dark-blue);
+      font-weight: 600;
+      text-align: left;
+      margin: 20px 0;      
+    }
+
+    .container h3:hover{
+      color: var(--cyan);
+      cursor: pointer;
+    }
+
+    .container p{
+      display: block;
+      font-weight: 300;
+      text-align: left;
+      color: var(--soft-blue);
+      margin: 20px 0;
+    }
+
+    .container .inf{
+      display: flex;
+      justify-content: space-between;
+      margin: 20px 0;
+      width: 100%;
+
+    }
+    .container .inf .value,
+    .container .inf .time{
+      display: flex;
+      align-items: center;
+      width: 40%;
+    }
+
+    .container .inf .value img,
+    .container .inf .time img{
+      height: 18px;
+      margin-right: 8px;
+
+    }
+
+    .container .inf .value p{
+      color: var(--cyan);
+      font-weight: 600;
+    }
+
+    .container .inf p{
+      margin: 0;
+    }
+
+    .container .inf p{
+      margin: 0;
+    }
+
+
+    .container .credits{
+      display: flex;
+      align-items: center;
+      border-top: 1px solid var(--very-dark-blue-line);
+    }
+
+    .container .credits img{
+      height: 32px;
+      margin-right: 20px;
+      border: 1px solid var(--white);
+      border-radius: 50%;    
+    }
+
+    .container .credits span{
+      font-weight: 400;
+    }
+
+    .container .credits span:hover{
+      color: var(--cyan);
+      cursor: pointer;
+    }
+
+    /* Attribution */
+    .attribution { 
+      font-size: 10px; 
+      text-align: center;
+      color: var(--soft-blue); 
+    }
+
+    .attribution a { 
+      font-size: 10px; 
+      color: var(--soft-blue); 
+    }
+
+@media all and (min-width: 376px) {
+  .container{
+      width: 356px;
+      height: 592px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="nft-preview-card">
+    <div class="container">
+      
+      <div class="nftImage">
+        <img src="images/image-equilibrium.jpg" alt="Equilibrium">
+        <div class="view">
+          <img src="images/icon-view.svg" alt="">
+        </div>
+      </div>
+      <h3>Equilibrium #3429</h3>
+      <p>Our Equilibrium collection promotes balance and calm.</p>
+      <div class="inf">
+
+        <div class="value">
+          <img src="images/icon-ethereum.svg" alt="">
+          <p>0.041 ETH</p>
+        </div>
+
+        <div class="time">
+          <img src="images/icon-clock.svg" alt="">
+          <p>3 days left</p>
+        </div>
+
+      </div>
+      <div class="credits">
+        <img src="images/image-avatar.png" alt="Creator">
+        <p>Creation of <span>Jules Wyvern</span></p>
+      </div>
+
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/arn28">Arnold Balabarca</a>.
+    </div>
+
+  </div>
+</body>
+</html>
